@@ -18,8 +18,8 @@ $alignItems: (
   flex-start, flex-end, center
 );
 
-@mixin breakpoint($name) {
-  @media screen and (min-width: map-get( $breakpoints, $name )) {
+@mixin breakpoints($name) {
+  @media screen and (min-width: map-get( $breakpoint, $name )) {
     @content
   }
 }
@@ -40,7 +40,7 @@ $alignItems: (
     }
   }
 
-  @include breakpoint('sm') {
+  @include breakpoints('sm') {
     @for $i from 1 to 13 {
       &_sm_#{$i} {
         flex-basis: $i/12 * 100%;
@@ -48,7 +48,7 @@ $alignItems: (
     }
   }
 
-  @include breakpoint('md') {
+  @include breakpoints('md') {
     @for $i from 1 to 13 {
       &_sm_#{$i} {
         flex-basis: $i/12 * 100%;
@@ -56,7 +56,7 @@ $alignItems: (
     }
   }
 
-  @include breakpoint('lg') {
+  @include breakpoints('lg') {
     @for $i from 1 to 13 {
       &_sm_#{$i} {
         flex-basis: $i/12 * 100%;
