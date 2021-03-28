@@ -13,19 +13,19 @@ export const TestGrid: Story = (args) =>
 <div style={{position: 'relative', height: '100vh'}} {...args}>
 <SectorsGrid spacing='md'></SectorsGrid>
 <Grid container spacing='sm'>
-  <Grid item xs={12} sm={6} md={6} lg={3}>
+  <Grid item xs={1}>
     <Box>Box 1</Box>
   </Grid>
 
-  <Grid item xs={12} sm={6} md={6} lg={3}>
+  <Grid item xs={1}>
     <Box>Box 2</Box>
   </Grid>
 
-  <Grid item xs={12} sm={6} md={6} lg={3}>
+  <Grid item xs={1}>
     <Box>Box 3</Box>
   </Grid>
 
-  <Grid item xs={12} sm={6} md={6} lg={3}>
+  <Grid item xs={1}>
     <Box>Box 4</Box>
   </Grid>
 </Grid>
