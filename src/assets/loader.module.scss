@@ -1,0 +1,50 @@
+
+.loader div{
+  border: 1px solid black;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background-color:red;
+  position:absolute;
+  transform-origin: -7px;
+  animation: light 3s linear infinite;
+  margin: 'auto 0'
+}
+
+.loader div:nth-child(1){
+  transform:rotate(0deg);
+  animation-delay:0s;
+}
+
+.loader div:nth-child(2){
+  transform:rotate(60deg);
+  animation-delay:.5s;
+}
+
+.loader div:nth-child(3){
+  transform:rotate(120deg);
+  animation-delay:1s;
+}
+
+.loader div:nth-child(4){
+  transform:rotate(180deg);
+  animation-delay:1.5s;
+}
+
+.loader div:nth-child(5){
+  transform:rotate(240deg);
+  animation-delay:2s;
+}
+
+.loader div:nth-child(6){
+  transform:rotate(300deg);
+  animation-delay:2.5s;
+}
+
+@keyframes light{
+  0%{background-color:red;}
+  40%{background-color:red;}
+  50%{background-color:rgb(100, 32, 32);}
+  60%{background-color:rgb(100, 32, 32);}
+  100%{background-color:rgb(92, 28, 28);}
+}
