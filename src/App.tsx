@@ -1,31 +1,32 @@
-import Preloader from "./assets/preloader"
-import './index.css'
+import { useState } from 'react'
+import Stepper from './components/Stepper/Stepper';
 
-const App = () => {
+function App() {
+  const [currentStep, setCurrentStep] = useState(1)
 
   return (
-    <div className="App" >
-      <button style={{
-        height: '40px',
-        background: 'red',
+    <div className="App">
+      <div className='stepperWrap' style={{
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
+        width: '314px',
+        flexWrap: 'nowrap',
+        alignItems: 'center'
 
-          <Preloader />
-
-        <span style={{
-        margin: '0 10px',
-        lineHeight: '40px',
-        // verticalAlign: 'middle',
-        // display: 'inline-block'
-      }}>
-          какой-то текст
-        </span>
-      </button>
+        }}>
+        <button 
+        style={{
+          height: '40px',
+          width: '130px'
+        }}
+          onClick={() => setCurrentStep(currentStep + 1)}
+        />
+      <Stepper
+        currentStep={currentStep}
+        steps={4}
+      />
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

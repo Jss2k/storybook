@@ -1,0 +1,64 @@
+.stepperWrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.stepperBar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.stepperBar li {
+  list-style-type: none;
+  width: 25%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepperBar li:before {
+  content: " ";
+  line-height: 16px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: block;
+  text-align: center;
+  background-color: #C4C4C4;
+}
+
+.stepperBar li:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: #C4C4C4;
+  top: 7px;
+  right: 75%;
+  z-index: -1;
+}
+
+.stepperBar li:first-child:after {
+  content: none;
+}
+
+.stepperBar li.active {
+  color: dodgerblue;
+}
+
+.stepperBar li.active:before {
+  background-color: green;
+  // background-color: var(--clubPrimary);
+}
+
+.stepperBar .active:after {
+  background-color: green;
+  // background-color: var(--clubPrimary);
+}
