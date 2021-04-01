@@ -14,7 +14,7 @@
 
 .stepperBar li {
   list-style-type: none;
-  width: 25%;
+  flex: 1;
   position: relative;
   text-align: center;
   display: flex;
@@ -42,7 +42,6 @@
   background-color: #C4C4C4;
   top: 7px;
   right: 75%;
-  z-index: -1;
 }
 
 .stepperBar li:first-child:after {
@@ -50,7 +49,7 @@
 }
 
 .stepperBar li.active {
-  color: dodgerblue;
+  color: green;
 }
 
 .stepperBar li.active:before {

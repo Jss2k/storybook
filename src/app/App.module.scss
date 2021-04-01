@@ -1,0 +1,473 @@
+$headerHeight: 88px;
+$footerHeight: 88px;
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: $headerHeight auto 0;
+  max-width: 924px;
+  width: 100%;
+  min-height: calc(100vh - #{$footerHeight} - #{$headerHeight});
+}
+
+.header {
+  position: absolute;
+  height: $headerHeight;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  box-shadow: none;
+  width: 100%;
+
+  .headerContainer {
+    display: flex;
+    width: 100%;
+    max-width: 924px;
+    align-items: center;
+    justify-content: space-between;
+  
+    .logoContainer {
+  
+    }
+    
+    .itemsContainer {
+      ul {
+        display: flex;
+        list-style: none;
+
+        li {
+
+        }
+      }
+    }
+  }
+}
+
+
+
+.infoBanner {
+  margin: 8px 0 12px;
+  max-width: 924px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  // background: var(--systemRed);
+  background: #EB5757;
+  border-radius: 12px;
+  // color: var(--systemWhite);
+  color: #FFFFFF;
+  cursor: pointer;
+
+  .infoText {
+    max-width: 586px;
+    flex: 2;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 110%;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.26px;
+
+    p {
+      margin: 20px;
+    }
+  }
+
+  .infoButton {
+    flex: 1;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin: 14px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 110%;
+    
+    .infoButtonText{
+      margin-right: 7px;
+    }
+
+    .infoButtonIcon{
+
+    }
+  }
+}
+
+.matchBanner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background-image: url();
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: 50%;
+  margin: 24px auto;
+  max-width: 925px;
+  position: relative;
+  // background-color: var(--clubBg1);
+  // color: var(--systemWhite);
+  background-color: #683C93;
+  color: #FFFFFF;
+
+  .backButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    background: rgba(50,50,50,.25);
+    border-radius: 8px;
+    width: 103px;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-around;
+
+    .backButtonText {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .backButtonIcon {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  .matchBannerConteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 720px;
+    margin: 27px auto;
+
+    .teamConteiner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin: 14px 26px 0;
+      
+      .teamLogo {
+        width: 98px;
+        height: 98px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .teamTitle {
+        margin: 22px 0 0;
+      }
+
+      .teamSubtitle {
+        margin: 7px 0;
+        opacity: 0.5;
+      }
+    }
+  
+    .infoConteiner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin: 8px 26px 0;
+
+      .leagueConteiner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+
+        .leagueIcon {
+          margin: 0 6px;
+        }
+
+        .leagueTitle {
+          text-transform: uppercase;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 110%;
+        }
+      }
+
+      .stadiumContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+
+        .stadiumIcon {
+          margin: 6px;
+        }
+
+        .stadiumTitle {
+          text-transform: uppercase;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 110%;
+        }
+      }
+
+      .dateConteiner {
+        h3 {
+          margin: 16px 0 16px;
+        }
+      }
+    }
+  }
+}
+
+.eventsContainer {
+  display: flex;
+  margin: 24px -8px;
+
+  .eventContainer {
+    background: #fff;
+      // background: var(--systemWhite);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+    max-width: 924px;
+    min-width: 450px;
+    width: 100%;
+    align-self: center;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 8px;
+
+    .eventLogo {
+      width: 72px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #323232;
+      // systemBlack
+    }
+
+    .eventInfo {
+      margin-left: 17px;
+      margin-top: 2px;
+      display: flex;
+      flex-direction: column;
+      color: #323232;
+            // systemBlack
+      .eventLeague {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 110%;
+
+        svg {
+          margin-right: 6px;
+        }
+      }
+
+      .eventDate {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 110%;
+        svg {
+          margin-right: 6px;
+        }
+
+        span {
+          margin-right: 4px;
+          color: #813BC3;
+          // clubPrimary
+        }
+      }
+
+      .eventHomeTeam {
+        font-weight: 700;
+        font-size: 17px;
+        letter-spacing: -.43px;
+        color: #323232;
+              // systemBlack
+        margin-bottom: 0;
+        line-height: 110%;
+      }
+
+      .eventGuestTeam {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 110%;
+        letter-spacing: -.43px;
+        color: #323232;
+              // systemBlack
+        opacity: .5;
+      }
+    }
+
+    .eventArrow {
+      // width: 19.88px;
+      // height: 25.5px;
+      position: absolute;
+      right: 6.25px;
+      padding: 6px;
+      bottom: 6.55px;
+      cursor: pointer;
+      svg {
+        path{
+          fill: gray;
+          // fill: var(--systemBlack25);
+        }
+      }
+    }
+  }
+}
+
+.seasonTicketsContainer {
+  display: flex;
+  margin: 24px -8px;
+
+  .seasonTicketContainer {
+    background: #813BC3;
+      // background: var(--clubPrimary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+    max-width: 924px;
+    min-width: 450px;
+    width: 100%;
+    align-self: center;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 8px;
+
+    .seasonTicketLogo {
+      width: 72px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #323232;
+      // systemBlack
+    }
+
+    .seasonTicketInfo {
+      width: 50%;
+      margin-left: 17px;
+      margin-top: 2px;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+            // var(--systemWhite);
+        .seasonTicketTitle {
+          font-family: SF Pro Display;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 22px;
+          line-height: 110%;
+          letter-spacing: -0.26px;
+          margin: 24px 0 6px;
+        }
+
+        .seasonTicketSubtitle {
+          font-family: SF Pro Text;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 110%;
+          letter-spacing: -0.08px;
+        }
+    }
+
+    .seasonTicketArrow {
+      // width: 19.88px;
+      // height: 25.5px;
+      position: absolute;
+      right: 6.25px;
+      padding: 6px;
+      bottom: 6.55px;
+      cursor: pointer;
+      svg {
+        path{
+          fill: gray;
+          // fill: var(--systemBlack25);
+        }
+      }
+    }
+
+    .seasonTicketImg {
+      position: absolute;
+      right:-7px;
+      padding: 6px;
+      top: -6px;
+      svg {
+        g{
+          rect {
+            // fill: black;
+          }
+
+        }
+
+          // fill: var(--systemBlack25);
+      }
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  height: $footerHeight;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  box-shadow: none;
+  width: 100%;
+  background:#D5D5D5;
+
+  .footerContainer {
+    display: flex;
+    width: 100%;
+    max-width: 924px;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .copyContainer {
+
+    }
+
+    .publicContainer {
+
+    }
+  }
+}
