@@ -15,6 +15,7 @@ import {ReactComponent as IconLeft} from './../testAssets/iconLeft.svg';
 import {ReactComponent as IconCalendar} from './../testAssets/iconCalendar.svg';
 import {ReactComponent as Ellipse180} from './../testAssets/Ellipse180.svg';
 import {ReactComponent as MiroodlesMono} from './../testAssets/MiroodlesMono.svg';
+import CoutdownTimer from '../components/CoutdownTimer/CountdownTimer';
 
 function App() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -41,13 +42,11 @@ function App() {
         </header>
       
       <main className={styles.wrapper}>
-        <button onClick={handleNext} 
-        
-        />
-        <Stepper2
-            steps={4}
-            currentStep={currentStep}
-            setCurrentStep={setCurrentStep}
+
+        <CoutdownTimer
+          label={'бронь'}
+          date={'April 8, 2021 01:50:00'}
+
         />
       </main>
 

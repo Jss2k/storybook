@@ -1,0 +1,51 @@
+.CountdownTimer {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  text-transform: uppercase;
+  color: #fff;
+  width: fit-content;
+  // система / systemWhite
+  // система / systemRed
+  background: #EB5757;
+  border-radius: 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 110%;
+    
+    span {
+      margin-right: 3px;
+    }
+
+    p {
+      margin: 0px;
+      display: inline-block;
+    }
+
+  .timerIcon {
+      display: flex;
+      align-items: center;
+      margin-right: 3px;
+  }
+
+  .timerLabel {
+    height: fit-content;
+  }
+
+  .timerWrap {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    .timerTimeContainer {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
