@@ -16,12 +16,19 @@ import {ReactComponent as IconCalendar} from './../testAssets/iconCalendar.svg';
 import {ReactComponent as Ellipse180} from './../testAssets/Ellipse180.svg';
 import {ReactComponent as MiroodlesMono} from './../testAssets/MiroodlesMono.svg';
 import CoutdownTimer from '../components/CoutdownTimer/CountdownTimer';
+import RangeSlider from '../components/RangeSlider/RangeSlider';
 
 function App() {
   const [currentStep, setCurrentStep] = useState(0);
+  const [value, setValue] = useState<number | string>(0)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value)
+  }
   const handleNext = () => {
     setCurrentStep((currentStep) => currentStep + 1);
   };
+  console.log(value)
   return (
     <div className="App" style={{display: 'flex', justifyContent:'center', background:'#D5D5D5'}} >
       <div className={styles.wrap}>
@@ -41,8 +48,14 @@ function App() {
           </div>
         </header>
       
-      <main className={styles.wrapper}>
-
+      <main className={styles.wrapper} style={{ width: '315px'}}>
+        <RangeSlider 
+          min={0}
+          max={9999}
+          step={1}
+          value={value}
+          onChange={(e) => handleChange(e)}
+        />
         <CoutdownTimer
           label={'бронь'}
           date={'April 8, 2021 01:50:00'}
