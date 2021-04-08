@@ -17,6 +17,7 @@ import {ReactComponent as Ellipse180} from './../testAssets/Ellipse180.svg';
 import {ReactComponent as MiroodlesMono} from './../testAssets/MiroodlesMono.svg';
 import CoutdownTimer from '../components/CoutdownTimer/CountdownTimer';
 import RangeSlider from '../components/RangeSlider/RangeSlider';
+import Slider from '../components/Carousel/Carousel';
 
 function App() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -61,6 +62,8 @@ function App() {
           date={'April 8, 2021 01:50:00'}
 
         />
+
+        <Slider />
       </main>
 
       <footer className={styles.footer}>
