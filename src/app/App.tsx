@@ -18,6 +18,7 @@ import {ReactComponent as MiroodlesMono} from './../testAssets/MiroodlesMono.svg
 import CoutdownTimer from '../components/CoutdownTimer/CountdownTimer';
 import RangeSlider from '../components/RangeSlider/RangeSlider';
 import Slider from '../components/Carousel/Carousel';
+import NotificationsList from '../components/NotificationsList/NotificationsList';
 
 function App() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -49,7 +50,7 @@ function App() {
           </div>
         </header>
       
-      <main className={styles.wrapper} style={{ width: '315px'}}>
+      <main className={styles.wrapper}>
         <RangeSlider 
           min={0}
           max={9999}
@@ -63,7 +64,7 @@ function App() {
 
         />
 
-        <Slider />
+        <NotificationsList />
       </main>
 
       <footer className={styles.footer}>

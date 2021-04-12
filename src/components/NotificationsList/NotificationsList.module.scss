@@ -1,0 +1,91 @@
+.NotificationsList {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 8px;
+  
+  .Notification:last-child>div {
+    border-bottom: none;
+  }
+}
+
+.Notification {
+  padding: 0 30px;
+  font-size: 16px;
+  line-height: 110%;
+  /* система / systemBlack */
+  color: #323232;
+
+  .notificationWrap {
+    padding: 20px 0px;
+    border-bottom: 2px dashed rgba(50, 50, 50, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+
+    .title {
+      position: relative;
+      font-weight: bold;
+      order: 1;
+      flex: 1;
+      min-width: 70%;
+      margin: 4px 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 5px;
+        left: -20px;
+/* система / systemGreen */
+        background: #27AE60;
+        border-radius: 50%;
+      }
+    }
+
+    .date {
+      order: 2;
+      flex: 1;
+      // width: 30%;
+      text-align: end;
+      margin: 4px 0;
+    }
+
+    .body {
+      order: 3;
+      flex: 1;
+      min-width: 90%;
+      margin: 4px 0;
+
+      p {
+        margin: 4px 0;
+      }
+
+      button {
+        outline: none;
+        border: none;
+        background: transparent;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 120%;
+        letter-spacing: 0.12px;
+        /* система / systemGreen */
+        color: #27AE60;
+        margin: 4px 0;
+      }
+    }
+  }
+
+  
+}
+
+@media (max-width: 480px) {
+  .notificationWrap {
+    flex-direction: column;
+
+    .date {
+      order: 4 !important;
+      text-align: start !important;
+    }
+  }
+}
