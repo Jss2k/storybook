@@ -1,0 +1,51 @@
+.headerBtn {
+  color: var(--clubPrimary);
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.backBtn {
+  color: var(--systemBlack);
+  border: none;
+  outline: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  svg {
+    path {
+      fill: var(--clubPrimary)
+    }
+  }
+}
+
+.MultistepForm {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  min-height: 290px;
+}
+
+header h2 {
+  flex: 2;
+}
+
+header span {
+  flex: 1;
+
+  &:first-child {
+    button {
+      margin-right: auto;
+    }
+  }
+
+  &:last-child {
+    button {
+      margin-left: auto;
+    }
+  }
+}

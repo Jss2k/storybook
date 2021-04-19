@@ -1,0 +1,101 @@
+@import '../../node_modules/normalize.css/normalize.css';
+
+@font-face {
+  font-family: 'TT Hoves';
+  src: url('../assets/fonts/TT\ Hoves\ Regular.otf'), url('../assets/fonts/TT\ Hoves\ Thin.otf'),
+    url('../assets/fonts/TT\ Hoves\ Black.otf'), url('../assets/fonts/TT\ Hoves\ Black\ Italic.otf'),
+    url('../assets/fonts/TT\ Hoves\ Bold.otf'), url('../assets/fonts/TT\ Hoves\ Bold\ Italic.otf'),
+    url('../assets/fonts/TT\ Hoves\ DemiBold.otf'),
+    url('../assets/fonts/TT\ Hoves\ DemiBold\ Italic.otf'),
+    url('../assets/fonts/TT\ Hoves\ ExtraBold.otf'),
+    url('../assets/fonts/TT\ Hoves\ ExtraBold\ Italic.otf'),
+    url('../assets/fonts/TT\ Hoves\ ExtraLight.otf'),
+    url('../assets/fonts/TT\ Hoves\ ExtraLight\ Italic.otf'),
+    url('../assets/fonts/TT\ Hoves\ Hairline.otf'),
+    url('../assets/fonts/TT\ Hoves\ Hairline\ Italic.otf'),
+    url('../assets/fonts/TT\ Hoves\ Italic.otf'), url('../assets/fonts/TT\ Hoves\ Light.otf'),
+    url('../assets/fonts/TT\ Hoves\ Light\ Italic.otf'),
+    url('../assets/fonts/TT\ Hoves\ Medium.otf'),
+    url('../assets/fonts/TT\ Hoves\ Medium\ Italic.otf'),
+    url('../assets/fonts/TT\ Hoves\ Thin\ Italic.otf');
+}
+
+:root {
+  --systemOrange: var(--systemOrangeFallback, #ff9500);
+  --systemRed: var(--systemRedFallback, #eb5757);
+  --systemGreen: var(--systemGreenFallback, #27ae60);
+  --systemYellow: var(--systemYellowFallback, #f2c94c);
+  --systemPureBlack: var(--systemPureBlackFallback, #000000);
+  --systemBlack: var(--systemBlackFallback, #323232);
+  --systemBlack50: var(--systemBlack50Fallback, rgba(50, 50, 50, 0.5));
+  --systemBlack25: var(--systemBlack25Fallback, rgba(50, 50, 50, 0.25));
+  --systemBlack10: var(--systemBlack10Fallback, rgba(50, 50, 50, 0.1));
+  --systemBlack05: var(--systemBlack05Fallback, rgba(50, 50, 50, 0.05));
+  --systemWhite: var(--systemWhiteFallback, #ffffff);
+  --clubLogo: var(
+    --clubLogoFallback,
+    url('https://api2.rostovhandball.ru/files/372f7c92-logo_handball.png')
+  );
+  --clubPrimary: var(--clubPrimaryFallback, #813bc4);
+  --clubPrimaryLight: var(--clubPrimaryLightFallback, #ac6ee7);
+  --clubBg1: var(--clubBg1Fallback, #683c93);
+  --clubBg2: var(--clubBg2Fallback, #ece9e0);
+  --clubBg3: var(--clubBg3Fallback, #371855);
+  --clubNavigation1: var(--clubNavigation1Fallback, #333333);
+  --clubNavigation2: var(--clubNavigation2Fallback, #ffffff);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'TT Hoves', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  position: relative;
+  background-color: var(--clubBg2);
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  margin-block: 0;
+  margin-inline: 0;
+  padding-inline: 1em;
+  line-height: 1.5em;
+}
+
+button {
+  outline: none;
+}

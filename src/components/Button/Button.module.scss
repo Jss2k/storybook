@@ -1,0 +1,90 @@
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  color: var(--clubNavigation2);
+  outline: none;
+  border: none;
+  transition: 0.7s;
+  padding: 6px 16px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+
+  &:hover {
+    box-shadow: 0px 4px 16px  var(--clubPrimary);
+    transition: 0.5s;
+  }
+
+  &:active {
+    background-color: var(--clubPrimaryLight);
+    transition: 0.5s;
+  }
+
+  .icon {
+    fill: var(--clubNavigation2)
+  }
+
+  .text {
+    margin: 0px 10px;
+  }
+}
+
+.btn-map {
+  height: 40px;
+  padding: 8px 16px;
+  opacity: 0.9;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+}
+
+.btn-active {
+  background-color: var(--clubPrimary);
+  opacity: 0.9;
+}
+
+.btn-disable {
+  background-color: var(--systemBlack25);
+}
+
+.btn-medium {
+  height: 32px;
+  padding: 6px 16px;
+  font-size: 14px;
+}
+
+.banner {
+  height: 32px;
+  padding: 6px 16px;
+  background-color: var(--clubPrimaryLight);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+  margin: 24px 0 0;
+}
+
+.btn-personal {
+  height: 38px;
+  padding: 8px 16px;
+  border-radius: 29px;
+  margin: 8px 0px;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 110%;
+  text-align: center;
+  letter-spacing: -0.43px;
+  background-color: #FFFFFF;
+  color: #333333;
+
+  &:active {
+    background-color: var(--clubPrimaryLight);
+    color: #FFFFFF;
+  }
+}

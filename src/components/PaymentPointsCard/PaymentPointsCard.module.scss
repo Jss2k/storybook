@@ -1,0 +1,47 @@
+.RangeSlider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  background: var(--systemWhite);
+  border: 1px solid var(--systemBlack25);
+  border-radius: 8px;
+  margin: 16px 0;
+  color: var(--systemBlack);
+
+  .sliderWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 110%;
+
+    .sliderTitle {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .sliderMain {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+        span {
+          color: var(--systemOrange);
+        }
+    }
+  }
+
+  .sliderBtn {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--systemOrange);
+  }
+}

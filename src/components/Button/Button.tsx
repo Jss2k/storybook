@@ -1,51 +1,35 @@
-import React from 'react';
-import './button.css';
+import { CSSProperties, FormEvent, ReactNode } from 'react';
+import classNames from './../utils/classNames';
+import Loader from './../Loader/Loader';
+import styles from './Button.module.scss';
 
-export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
-}
+type ButtonProps = {
+  disabled?: boolean;
+  children?: JSX.Element | string;
+  icon?: ReactNode;
+  loading?: boolean;
+  style?: CSSProperties;
+  className?: string;
+  onClick?: (e?: FormEvent) => void;
+};
 
-/**
- * Primary UI component for user interaction
- */
-export const Button: React.FC<ButtonProps> = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+function Button(props: ButtonProps) {
+  const { icon, loading, disabled, className, style, onClick } = props;
+
+  const active = disabled ? 'disable' : 'active';
+  const loader = loading ? <Loader /> : icon;
+
   return (
     <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{
-        margin: '17px 0',
-
-       }}
-      {...props}
+      className={classNames(styles.btn, styles[`btn-${active}`], styles[`${className}`])}
+      style={style}
+      onClick={onClick}
     >
-      {label}
+      <span className={styles.icon}>{loader}</span>
+      <span className={styles.text}>{props.children}</span>
     </button>
   );
-};
+}
+
+export type { ButtonProps };
+export default Button;

@@ -1,0 +1,57 @@
+.progressBar {
+  align-self: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.progressBar .step {
+  align-items: center;
+  align-self: auto;
+  color: #C4C4C4;
+  display: flex;
+  justify-content: center;
+}
+.progressBar .step.active .point {
+  background: var(--clubPrimary);
+  color: var(--clubPrimary);
+  transition: all 0.2s;
+  transition-delay: 0.3s;
+}
+.progressBar .step.active .progress:after {
+  width: 100%;
+  transition: width 0.3s ease;
+}
+.progressBar .step .point {
+  display: inline-block;
+  border-radius: 50%;
+  background: #C4C4C4;
+  color: #C4C4C4;
+  cursor: pointer;
+  font-weight: bold;
+  height: 16px;
+  line-height: 16px;
+  width: 16px;
+  text-align: center;
+  z-index: 1;
+}
+
+.progressBar .step .progress {
+  pointer-events: none;
+  width: 20px;
+  background: #C4C4C4;
+  height: 2px;
+  margin: 0 7px;
+  position: relative;
+  z-index: 0;
+}
+
+.progressBar .step .progress:after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 100%;
+  background: var(--clubPrimary);
+}

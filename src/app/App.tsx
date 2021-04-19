@@ -1,8 +1,8 @@
 // import Logo from '../components/Logo/Logo';
-import Stepper2 from './../components/Stepper2/Stepper2'
+import Authorization from './../components/Authorization/Authorization'
 import './App.scss';
 import styles from './App.module.scss';
-import {Button} from './../components/Button/Button';
+import Button from './../components/Button/Button';
 import { useState } from 'react'
 import logo1 from './../testAssets/Group1.png'
 import logo2 from './../testAssets/Group1810.png'
@@ -56,7 +56,7 @@ function App() {
           max={9999}
           step={1}
           value={value}
-          onChange={(e) => handleChange(e)}
+          onChange={(e: any) => handleChange(e)}
         />
         <CoutdownTimer
           label={'бронь'}
@@ -65,6 +65,7 @@ function App() {
         />
 
         <NotificationsList />
+        <Authorization />
       </main>
 
       <footer className={styles.footer}>

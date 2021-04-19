@@ -1,0 +1,16 @@
+.btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--systemBlack25);
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--systemBlack10);
+  }
+}
